@@ -42,3 +42,8 @@ jobs:
           stack install \
             --flag kmonad:dext \
             --extra-include-dirs=c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit:c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include
+      - name: upload files
+        uses: actions/upload-artifact@v3
+        with:
+          name: kmonad
+          path: $HOME/.local/bin/kmonad
